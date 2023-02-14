@@ -1,5 +1,5 @@
 # Walk The Plank!
-![WTP](https://github.com/Byron-Dowling/Assets/blob/main/Images/Walk%20the%20Plank.png?raw=true | width=100)
+<img src="https://github.com/Byron-Dowling/Assets/blob/main/Images/Walk%20the%20Plank.png?raw=true" width = "100" height = "50"/>
 ### Byron Dowling
 ### Description:
 
