@@ -36,17 +36,16 @@ Since this is a Computer Science class, all of the words from the potential word
     - Author: [the Lore Observer] https://loreobserver.itch.io/
 
 - Various Background Theme images
-    *Note* Most images were created by me using these items layered together
     - Vecteezy, Author [Grahics RF]
-    - https://www.vecteezy.com/vector-art/3188122-pirate-concept-with-walk-the-plank-font-banner-on-white-background
-    - https://www.vecteezy.com/vector-art/2978633-walk-the-plank-font-banner-with-pirate-cartoon-character
-    - https://www.vecteezy.com/vector-art/3022903-scene-with-wooden-plank-on-the-ship 
-    - https://www.vecteezy.com/vector-art/6037135-set-of-pirate-cartoon-characters-and-objects
-    - https://www.vecteezy.com/vector-art/5156767-set-of-pirate-cartoon-characters-and-objects
-    - https://www.vecteezy.com/vector-art/7190621-empty-ocean-sea-background
+        - https://www.vecteezy.com/vector-art/3188122-pirate-concept-with-walk-the-plank-font-banner-on-white-background
+        - https://www.vecteezy.com/vector-art/2978633-walk-the-plank-font-banner-with-pirate-cartoon-character
+        - https://www.vecteezy.com/vector-art/3022903-scene-with-wooden-plank-on-the-ship 
+        - https://www.vecteezy.com/vector-art/6037135-set-of-pirate-cartoon-characters-and-objects
+        - https://www.vecteezy.com/vector-art/5156767-set-of-pirate-cartoon-characters-and-objects
+        - https://www.vecteezy.com/vector-art/7190621-empty-ocean-sea-background
 
     - Vecteezy, Author [Miguel Angel]
-    - https://www.vecteezy.com/vector-art/92807-blood-dripping-vectors
+        - https://www.vecteezy.com/vector-art/92807-blood-dripping-vectors
 
     - Vecteezy, Author [tdsouzpro127653]
-    - https://www.vecteezy.com/vector-art/12189172-set-of-funny-skulls-white-human-bones-scary-element-of-halloween-death-head-cartoon-flat-illusration
+        - https://www.vecteezy.com/vector-art/12189172-set-of-funny-skulls-white-human-bones-scary-element-of-halloween-death-head-cartoon-flat-illusration
