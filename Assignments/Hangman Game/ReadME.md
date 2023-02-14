@@ -1,5 +1,5 @@
 # Walk The Plank!
-<img src="https://github.com/Byron-Dowling/Assets/blob/main/Images/Walk%20the%20Plank.png?raw=true" width = "100" height = "50"/>
+<img src="https://github.com/Byron-Dowling/Assets/blob/main/Images/Walk%20the%20Plank.png?raw=true" width = "300" height = "150"/>
 ### Byron Dowling
 ### Description:
 
