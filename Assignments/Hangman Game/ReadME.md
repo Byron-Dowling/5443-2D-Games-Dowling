@@ -18,5 +18,11 @@ Since this is a Computer Science class, all of the words from the potential word
 |   3    | KeyboardMap.py          | Helper file to enable keyboard with mousedown events |
 |   4    | HMW.txt                 | Input file of potential words                        |
 
+### Screenshots
+
+![WinnerScreen](https://github.com/Byron-Dowling/Assets/blob/main/Images/Hangman%20Winner%20Screen.png?raw=true)
+
+![GameOver](https://github.com/Byron-Dowling/Assets/blob/main/Images/Hangman%20Game%20Over%20Screen.png?raw=true)
+
 
 ### Credits of Material Used
