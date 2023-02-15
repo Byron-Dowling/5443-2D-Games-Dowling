@@ -33,6 +33,7 @@ import os
 import copy
 import keyboardlayout as kl
 import keyboardlayout.pygame as klp
+from pygame import mixer
 from DictionaryWords import HMW
 from KeyboardMap import ButtonClicked, fetchKey
 from PIL import Image, ImageDraw
@@ -130,6 +131,15 @@ pygame.display.set_caption("Let's Play Walk the Plank!")
 
 ## Setting the background image and orienting starting from (0,0) origin i.e top left corner
 BackGround = Background("Vintage_Map.png", [0, 0])
+
+  
+"""
+    The Wilhelm effect is in the public domain and therefore free from copyright:
+    - https://commons.wikimedia.org/wiki/File:Wilhelm_Scream.ogg
+"""
+mixer.init()
+mixer.music.load("Wilhelm_Scream.wav")
+mixer.music.set_volume(0.7)
 
 ###################################################################################################
 
@@ -233,6 +243,14 @@ while running:
             if not gameOver:
                 letterGuessed = ButtonClicked(event.pos)
 
+            """
+                Trying to make the key light up properly but this shitty fucking
+                module is so poorly written it doesn't seem to work
+            """
+            if letterGuessed is not None:
+                key = fetchKey(letterGuessed)
+                keyboard_layout.update_key(key, pressed_key_info)
+
             ## If we have a letter match from the guess, update the bool list
             for i in range(0, len(entry["Letters"]), 1):
                 if letterGuessed == entry["Letters"][i]:
@@ -271,6 +289,7 @@ while running:
     plankBG = pygame.transform.smoothscale(plankBG, (815,450))
     screen.blit(plankBG, (935,350))
 
+
     ## Plank and shark infested water background
     sharks = pygame.image.load(f'Sharks\Shark{sharkCount}.png').convert()
     sharks = pygame.transform.smoothscale(sharks, (815,450))
@@ -290,6 +309,8 @@ while running:
 
             if deathFrameCount > 23:
                 deathAnimation = True
+                # Start playing the song
+                mixer.music.play()
 
         else:
             ## Plank and shark infested water background
@@ -333,11 +354,13 @@ while running:
     invertedPirate2 = pygame.transform.flip(pirate2Copy, True, False)
     screen.blit(invertedPirate2, (1490, 575))
 
+
     ## Most spites run over 6 frames
     spriteFrameCount += 1
 
     if spriteFrameCount > 6:
         spriteFrameCount = 0
+
 
     """
         The idea is to loop through the letters and space them out an even amount
