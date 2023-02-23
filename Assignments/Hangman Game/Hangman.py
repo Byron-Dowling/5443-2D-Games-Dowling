@@ -84,6 +84,41 @@ class Background(pygame.sprite.Sprite):
 ###################################################################################################
 
 """
+ 
+  ██████╗  █████╗ ███╗   ███╗███████╗        
+ ██╔════╝ ██╔══██╗████╗ ████║██╔════╝        
+ ██║  ███╗███████║██╔████╔██║█████╗          
+ ██║   ██║██╔══██║██║╚██╔╝██║██╔══╝          
+ ╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗        
+  ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝        
+                                             
+ ███████╗██████╗ ██████╗ ██╗████████╗███████╗
+ ██╔════╝██╔══██╗██╔══██╗██║╚══██╔══╝██╔════╝
+ ███████╗██████╔╝██████╔╝██║   ██║   █████╗  
+ ╚════██║██╔═══╝ ██╔══██╗██║   ██║   ██╔══╝  
+ ███████║██║     ██║  ██║██║   ██║   ███████╗
+ ╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝   ╚═╝   ╚══════╝
+                                             
+"""
+
+class GameSprite:
+    def __init__(self, imgLink, location, smsc, inverted=False):
+        
+        if not inverted:
+            GS = pygame.image.load(imgLink)
+            GS = pygame.transform.smoothscale(GS, smsc)
+            screen.blit(GS, location)
+
+        else:
+            GS = pygame.image.load(imgLink)
+            GS = pygame.transform.smoothscale(GS, smsc)
+            GS_Copy = GS.copy()
+            IGS = pygame.transform.flip(GS_Copy, True, False)
+            screen.blit(IGS, location)
+
+###################################################################################################
+
+"""
     Building a Dictionary Lookup of letters and their corresponding image paths
     LetterImages is a current empty list
     LetterImage is our dictionary definition that specifies Letter as the key
@@ -241,7 +276,9 @@ while running:
             correctGuess = False
 
             if not gameOver:
+                # print(f'Mouse was clicked at {event.pos}')
                 letterGuessed = ButtonClicked(event.pos)
+                # print(f'You guessed the letter: {letterGuessed}')
 
             """
                 Trying to make the key light up properly but this shitty fucking
@@ -285,25 +322,18 @@ while running:
     keyboard_layout.draw(screen)
 
     ## Blank Plank background
-    plankBG = pygame.image.load('Plank_bg_sharks.png').convert()
-    plankBG = pygame.transform.smoothscale(plankBG, (815,450))
-    screen.blit(plankBG, (935,350))
+    plankBG = GameSprite('Plank_bg_sharks.png',(935,350), (815,450), False)
 
 
     ## Plank and shark infested water background
-    sharks = pygame.image.load(f'Sharks\Shark{sharkCount}.png').convert()
-    sharks = pygame.transform.smoothscale(sharks, (815,450))
-    screen.blit(sharks,(935,350))
+    sharks = GameSprite(f'Sharks\Shark{sharkCount}.png',(935,350),(815,450),False)
 
 
     ## If Game Over
     if gameOver == True:
-
         ## Ensures the death animation plays once before looping the game over frames
         if deathAnimation == False:
-            fallingSprite = pygame.image.load(f'PlankFall\PF{deathFrameCount}.png').convert()
-            fallingSprite = pygame.transform.smoothscale(fallingSprite, (815,450))
-            screen.blit(fallingSprite,(935,350))
+            fallingSprite = GameSprite(f'PlankFall\PF{deathFrameCount}.png', (935,350), (815,450), False)
 
             deathFrameCount += 1
 
@@ -314,45 +344,34 @@ while running:
 
         else:
             ## Plank and shark infested water background
-            sharksAndBones = pygame.image.load(f'GameOver\GMO{sharkCount}.png').convert()
-            sharksAndBones = pygame.transform.smoothscale(sharksAndBones, (815,450))
-            screen.blit(sharksAndBones,(935,350))
+            sharksAndBones = GameSprite(f'GameOver\GMO{sharkCount}.png', (935,350), (815,450), False)
 
     ## Winner screen frames
     if winner == True:
-        WBG = pygame.image.load(f'Winner\WBG{sharkCount}.png').convert()
-        WBG = pygame.transform.smoothscale(WBG, (815,450))
-        screen.blit(WBG,(935,350))
-
+        WBG = GameSprite(f'Winner\WBG{sharkCount}.png', (935,350), (815,450), False)
 
     ## Slow down the animation so the sharks don't swim ridiculously fast
     if tick % 2 == 0:
-
         sharkCount += 1
-
         if sharkCount > 8:
             sharkCount = 1
 
 
     ## Drawing the Plank victim
     if guessesRemaing == True:
-        victimSprite = pygame.image.load(f'Sprites\_Victim_000_IDLE_00{spriteFrameCount}.png')
-        victimSprite = pygame.transform.smoothscale(victimSprite, (170, 170))
-        screen.blit(victimSprite, (1390 - victimMovement, 485))
+        link = f'Sprites\_Victim_000_IDLE_00{spriteFrameCount}.png'
+        location = (1390 - victimMovement, 485)
+        victimSprite = GameSprite(link, location, (170,170), False)
 
     ## Drawing Pirate #1
-    pirate1 = pygame.image.load(f'Sprites\_Pirate1_000_IDLE_00{spriteFrameCount}.png')
-    pirate1 = pygame.transform.smoothscale(pirate1, (170, 170))
-    pirate1Copy = pirate1.copy()
-    invertedPirate1 = pygame.transform.flip(pirate1Copy, True, False)
-    screen.blit(invertedPirate1, (1445 - pirateMovement, 485))
+    p1_link = f'Sprites\_Pirate1_000_IDLE_00{spriteFrameCount}.png'
+    p1_location = (1445 - pirateMovement, 485)
+    pirate1 = GameSprite(p1_link, p1_location, (170,170), True)
 
     ## Drawing Pirate #2
-    pirate2 = pygame.image.load(f'Sprites\_Pirate2_000_IDLE_00{spriteFrameCount}.png')
-    pirate2 = pygame.transform.smoothscale(pirate2, (170, 170))
-    pirate2Copy = pirate2.copy()
-    invertedPirate2 = pygame.transform.flip(pirate2Copy, True, False)
-    screen.blit(invertedPirate2, (1490, 575))
+    p2_link = f'Sprites\_Pirate2_000_IDLE_00{spriteFrameCount}.png'
+    p2_location = (1490, 575)
+    pirate2 = GameSprite(p2_link, p2_location, (170,170), True)
 
 
     ## Most spites run over 6 frames
@@ -379,19 +398,20 @@ while running:
         if entry["Letters"][i] != " ":
 
             if entry["Guessed"][i] != False:
-                LI = pygame.image.load(imgPath["ImagePath"]).convert()
-                LI = pygame.transform.smoothscale(LI, (70,70))
+                LI_Link = imgPath["ImagePath"]
+                LI_SS = (70,70)
             else:
                 winner = False
-                LI = pygame.image.load('Letters\_.png').convert()
-                LI = pygame.transform.smoothscale(LI, (70,70))
+                LI_Link = 'Letters\_.png'
+                LI_SS = (70,70)
 
             ## Trying to handle if the words go off the screen so that they appear a row down
             if (xBias - 80) >= screenWidth:
                 yBias += 100
                 xBias = 0
 
-            screen.blit(LI, (10 + xBias, 50 + yBias))
+            # screen.blit(LI, (10 + xBias, 50 + yBias))
+            LI = GameSprite(LI_Link, (10 + xBias, 50 + yBias), LI_SS, False)
 
             xBias += 85
 
