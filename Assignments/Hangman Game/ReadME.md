@@ -3,7 +3,7 @@
 
 ## Description:
 
-Walk The Plankt is a Hangman-styled game that prompts the user with a keyboard and blank tiles of varying length with the goal of correclty picking the letters that help reveal the word. Correct guesses will reveal those letters in their respective places while incorrect guesses will slowly inch the pirate captain closer to the edge of the plank and a One-Way ticket to Davey Jone's Locker! Correctly reveal all the letters and the player wins. Fail to do so, and the user will see the captain take a plunge into shark infested waters where a gruesome death awaits!
+Walk The Plank is a Hangman-styled game that prompts the user with a keyboard and blank tiles of varying length with the goal of correclty picking the letters that help reveal the word. Correct guesses will reveal those letters in their respective places while incorrect guesses will slowly inch the pirate captain closer to the edge of the plank and a One-Way ticket to Davey Jone's Locker! Correctly reveal all the letters and the player wins. Fail to do so, and the user will see the captain take a plunge into shark infested waters where a gruesome death awaits!
 \
 \
 Since this is a Computer Science class, all of the words from the potential word bank are Computer Science terminology that the average student should have come across amongst various classes. 
