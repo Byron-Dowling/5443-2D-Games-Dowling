@@ -3,7 +3,7 @@
 
 ## Description:
 
-Art of War is a gladiator styled multi-player combat game. Players can move, jump, and throw projectiles at the opposing player. Successful hits deduct health, and once health reaches zero, there is a winner. A reset button then shows up allowing a new game to start by interacting with the button. Sprites show a wide array of animation styles and effects and each sprite has their own unique look and weapons.
+Art of War is a gladiator-styled multiplayer combat game. Players can move, jump, and throw projectiles at the opposing player. Successful hits deduct health, and once health reaches zero, there is a winner. A reset button then shows up allowing a new game to start by interacting with the button. Sprites show a wide array of animation styles and effects and each sprite has their own unique look and weapons.
 \
 
 ## Files
