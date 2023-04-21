@@ -54,9 +54,7 @@ from PIL import Image, ImageDraw
  ██║██║╚██╔╝██║██╔══██║██║   ██║██╔══╝  ██╔══██╗  ╚██╔╝                               
  ██║██║ ╚═╝ ██║██║  ██║╚██████╔╝███████╗██║  ██║   ██║                                
  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝                                
-
-
-      Helper background class from Dr. Griffin used on Batteship demo                                                                                 
+                                                                              
 """
 
 class Background(pygame.sprite.Sprite):
