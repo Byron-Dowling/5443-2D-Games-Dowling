@@ -26,8 +26,8 @@ Asteroids Spaceshooter is a cooperative multiplayer game where the players work 
 
 ## Asset Credits
    Space Environment Sprites:
-      - Author: [FoozleCC]
-      - https://foozlecc.itch.io/void-fleet-pack-2
-      - https://foozlecc.itch.io/void-environment-pack
-      - https://foozlecc.itch.io/void-main-ship 
-      - https://norma-2d.itch.io/celestial-objects-pixel-art-pack
+      - Author: [FoozleCC]\
+      - https://foozlecc.itch.io/void-fleet-pack-2\
+      - https://foozlecc.itch.io/void-environment-pack\
+      - https://foozlecc.itch.io/void-main-ship \
+      - https://norma-2d.itch.io/celestial-objects-pixel-art-pack\
