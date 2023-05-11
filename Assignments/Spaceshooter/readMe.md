@@ -3,7 +3,7 @@
 ## Description:
 
 Asteroids Spaceshooter is a cooperative multiplayer game where the players work together to destroy (shoot) as many asteroids as possible without dying. The players have recharging shields to assist in protecting themselves from the asteroids. When all players are dead, the game is over.
-\
+
 
 ## Files
 
