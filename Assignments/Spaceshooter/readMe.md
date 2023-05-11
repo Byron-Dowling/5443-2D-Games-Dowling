@@ -9,7 +9,7 @@ Asteroids Spaceshooter is a cooperative multiplayer game where the players work 
 
 |   #    | File                    | Description                                          |
 | :---:  | ----------------------- | ---------------------------------------------------- |
-|   1    | __main__.py.py          | Main Driver of the Game                              |
+|   1    | __main__.py             | Main Driver of the Game                              |
 |   2    | comms.py                | Helper Class to assist with message passing          |
 |   3    | utils.py                | Helper file to load music and sprites                |
 |   4    | models.py               | Class files for running the game                     |
